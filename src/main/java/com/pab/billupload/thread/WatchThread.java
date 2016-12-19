@@ -18,8 +18,8 @@ public class WatchThread extends Thread {
     public WatchThread(LinkedBlockingDeque<Path> indexQueue) {
         this.indexQueue = indexQueue;
         Properties prop = PropertiesUtil.getProperties();
-        this.scan_path = prop.getProperty("scan_path");
-        this.recursive_flag = (prop.getProperty("recursive_flag").equals("yes")) ? true : false;
+        this.scan_path = prop.getProperty("SCAN_PATH");
+        this.recursive_flag = (prop.getProperty("recursive_flag").equals("yes"));
     }
 
     public void run() {
